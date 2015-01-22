@@ -1,16 +1,17 @@
-var game = new Phaser.Game(1024, 768, Phaser.AUTO, 'game', {preload: preload, create: create, update: update, render: render});
+// Initialize Phaser
+var game = new Phaser.Game(500, 350, Phaser.AUTO, 'gameDiv');
 
+// Our 'global' variable
+game.global = {
+	score: 0,
+	// Add other global variables
+};
 
-var player, cursor, map, layer;
+// Define states
+game.state.add('boot', bootState);
+game.state.add('load', loadState);
+game.state.add('menu', menuState);
+game.state.add('play', playState);
 
-function preload() {
-}
-
-function create() {
-}
-
-function update() {
-}
-
-function render() {
-}
+// Start the "boot" state
+game.state.start('boot');
