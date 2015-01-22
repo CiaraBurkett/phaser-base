@@ -1,4 +1,4 @@
-var loadState = {
+var load = {
 
 	preload: function () {		
 		// Add a loading label 

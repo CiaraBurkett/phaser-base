@@ -1,5 +1,5 @@
 // Initialize Phaser
-var game = new Phaser.Game(500, 350, Phaser.AUTO, 'gameDiv');
+var game = new Phaser.Game(500, 350, Phaser.AUTO, 'game');
 
 // Our 'global' variable
 game.global = {
@@ -8,10 +8,10 @@ game.global = {
 };
 
 // Define states
-game.state.add('boot', bootState);
-game.state.add('load', loadState);
-game.state.add('menu', menuState);
-game.state.add('play', playState);
+game.state.add('boot', boot);
+game.state.add('load', load);
+game.state.add('menu', menu);
+game.state.add('play', play);
 
 // Start the "boot" state
 game.state.start('boot');

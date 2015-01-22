@@ -1,4 +1,4 @@
-var menuState = {
+var menu = {
 
 	create: function() { 
 		// Name of the game

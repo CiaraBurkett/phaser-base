@@ -1,4 +1,4 @@
-var playState = {
+var play = {
 
 	create: function() { 
 
@@ -6,5 +6,5 @@ var playState = {
 
 	update: function() {
 
-	},
+	}
 };
