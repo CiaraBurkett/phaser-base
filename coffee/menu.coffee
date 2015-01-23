@@ -7,7 +7,7 @@ menu =
         
         # Instructions for starting the game
         startLabel = game.add.text game.world.centerX, game.world.height - 80,
-        'Press the UP arrow key to start.',
+        'Press the ENTER key to start.',
         font: '25px Arial', fill: '#FFF'
         startLabel.anchor.setTo 0.5, 0.5
         game.add.tween(startLabel).to(angle: -2, 500).to(angle: 2, 500).loop().start()
@@ -17,8 +17,9 @@ menu =
         @mutebutton.input.useHandCursor = true
         @muteButton.frame = 1 if game.sound.mute
         
-        upKey = game.input.keyboard.addKey Phaser.Keyboard.UP
-        upKey.onDown.addOnce @start, this
+        # Game starts when ENTER key is pressed
+        enterKey = game.input.keyboard.addKey Phaser.Keyboard.ENTER
+        enterKey.onDown.addOnce @start, this
         
     toggleSound: ->
         game.sound.mute = not game.sound.mute

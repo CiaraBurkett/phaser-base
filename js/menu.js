@@ -3,13 +3,13 @@ var menu;
 
 menu = {
   create: function() {
-    var nameLabel, startLabel, upKey;
+    var enterKey, nameLabel, startLabel;
     nameLabel = game.add.text(game.world.centerX, game.world.centerY, 'Name', {
       font: '150px Arial',
       fill: '#FFF'
     });
     nameLabel.anchor.setTo(0.5, 0.5);
-    startLabel = game.add.text(game.world.centerX, game.world.height - 80, 'Press the UP arrow key to start.', {
+    startLabel = game.add.text(game.world.centerX, game.world.height - 80, 'Press the ENTER key to start.', {
       font: '25px Arial',
       fill: '#FFF'
     });
@@ -24,8 +24,8 @@ menu = {
     if (game.sound.mute) {
       this.muteButton.frame = 1;
     }
-    upKey = game.input.keyboard.addKey(Phaser.Keyboard.UP);
-    return upKey.onDown.addOnce(this.start, this);
+    enterKey = game.input.keyboard.addKey(Phaser.Keyboard.ENTER);
+    return enterKey.onDown.addOnce(this.start, this);
   },
   toggleSound: function() {
     game.sound.mute = !game.sound.mute;
